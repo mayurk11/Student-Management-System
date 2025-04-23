@@ -4,8 +4,6 @@
     if(  isset( $_GET["submit"]  ) )
     {   
         
-
-
         $f_name = trim($_GET["fname"]);
         $s_email = trim($_GET["email"]);
         $s_contact = trim($_GET["contact"]);
