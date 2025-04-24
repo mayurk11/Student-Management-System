@@ -18,7 +18,7 @@
         $myQuery->bind_param("ssssss",$f_name,$s_email,$s_contact,$s_password,$gender,$branch);
 
         if( $myQuery->execute() == TRUE)
-                {
+        {
             echo "
                 <script type='text/javascript'>
                     alert('Data Inserted');
