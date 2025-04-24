@@ -4,14 +4,14 @@
        include("connection.php");
        $email = $_GET["myVar"];
        
-       $myQuery = "SELECT * FROM student WHERE email='".$email."'";
+       $myQuery = "SELECT * FROM student WHERE semail='".$email."'";
        $result = $conn->query($myQuery);
        if( $result->num_rows > 0)
        {
            while($row = $result->fetch_assoc() )
            {
                $fn = $row["fullname"]; 
-               $em = $row["email"];
+               $em = $row["semail"];
                $cn = $row["contact"];
                echo '
                    <tr>
@@ -47,11 +47,11 @@
                    Fullname: 
                    <input type="text" name="fname" placeholder="Enter name" class="form-control" value="<?php echo $fn; ?>">
                    Email: 
-                   <input type="email" name="email" placeholder="Enter email" class="form-control" value="<?php echo $em; ?>">
+                   <input type="email" name="semail" placeholder="Enter email" class="form-control" value="<?php echo $em; ?>">
                    Contact: 
                    <input type="text" name="contact" placeholder="Enter contact" class="form-control" value="<?php echo $cn; ?>">
                    <br>
-                   <input type="text" placeholder="Enter Password" name="password" class="form-control">
+                   <input type="text" placeholder="Enter Password" name="spassword" class="form-control">
                    <br>
 
                    <input type="radio" placeholder="Enter 
@@ -76,7 +76,7 @@
 
        <div class="row">
            <form action="selectData.php">
-               <input type="text" name="email" id="" placeholder="enter email to search">
+               <input type="text" name="semail" id="" placeholder="enter email to search">
                <input type="submit">
            </form>
        </div>

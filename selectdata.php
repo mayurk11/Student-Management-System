@@ -38,7 +38,7 @@
         include("connection.php");
         
 
-        $myQuery = "SELECT * FROM student WHERE email='".$es."'";
+        $myQuery = "SELECT * FROM student WHERE semail='".$es."'";
 
         $result  = $conn->query( $myQuery  );
 
@@ -47,8 +47,8 @@
             while( $row = $result->fetch_assoc() )
             {
                 
-                $fn = $row["fullName"];
-                $em = $row["email"];
+                $fn = $row["fullname"];
+                $em = $row["semail"];
                 $cn = $row["contact"];
                 $pw = $row["password"];
 
@@ -73,7 +73,7 @@
 
     </table>
 
-    <a href="registration.html" class="btn btn-success"> Go Back </a>
+    <a href="registration.html"> Go Back </a>
         </div>
     </div>
 </body>

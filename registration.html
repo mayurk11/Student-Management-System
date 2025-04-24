@@ -11,49 +11,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row p-5  bg-warning">
+    <div class="container">
+        <div class="row p-5 bg-warning">
             <div class="col-md-6 p-5">
-                <form action="insert.php" method="GET" enctype="multipart/form-data">
+                <form action="insert.php" method="POST" enctype="multipart/form-data">
                     Fullname: 
                     <input type="text" name="fname" placeholder="Enter name" class="form-control">
                     Email: 
-                    <input type="email" name="email" placeholder="Enter email" class="form-control">
+                    <input type="email" name="semail" placeholder="Enter email" class="form-control">
                     Contact: 
                     <input type="text" name="contact" placeholder="Enter contact" class="form-control">
                     <br>
-                    <input type="text" placeholder="Enter Password" name="password" class="form-control">
+                    <input type="text" placeholder="Enter Password" name="spassword" class="form-control">
                     <br>
 
                     <input type="radio" placeholder="Enter 
                     Password" name="gender" value="male">Male
                     <input type="radio" placeholder="Enter Password" name="gender" value="female">Female
                     <br>
-                    <br>
+
                     <select name="branch" class="form-select">
-                        <option value="21" >CSE</option>
+                        <option value="21">CSE</option>
                         <option value="22">IT</option>
                     </select>
                     <br>
-                    <input type="file" name="fileToUpLoad" class="form-control">
+                    <input type="file" name="fileToUpload" class="form-control">
                     <br>
-                    <input type="submit" class="btn btn-success ps-2" name="submit">
+                    <input type="submit" class="btn btn-success" name="submit">
                 </form>
             </div>
-            <div class="col-md-6 p-5 mt-4" p-5>
-              <a href="select.php" class="btn btn-primary ">View Data</a>
+            <div class="col-md-6" p-5>
+              <a href="select.php" class="btn btn-primary">View Data</a>
             </div>
         </div>
-        <br>
 
         <div class="row">
             <form action="selectData.php">
-                <div class="row">
-                    <div class="row col-md-6">
-                        <input type="text" name="semail" id="" placeholder="Enter Email to search" class="form-control" >
-                    </div>
-                    <div class="row col-md-2"><input type="submit" class="btn btn-success"></div>
-                </div>
+                <input type="text" name="semail" id="" placeholder="enter email to search">
+                <input type="submit">
             </form>
         </div>
     </div>

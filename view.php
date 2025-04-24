@@ -18,14 +18,14 @@
             include("connection.php");
             $email = $_GET["myVar"];
             
-            $myQuery = "SELECT * FROM student WHERE email='".$email."'";
+            $myQuery = "SELECT * FROM student WHERE semail='".$email."'";
             $result = $conn->query($myQuery);
             if( $result->num_rows > 0)
             {
                 while($row = $result->fetch_assoc() )
                 {
-                    $fn = $row["fullName"]; 
-                    $em = $row["email"];
+                    $fn = $row["fullname"]; 
+                    $em = $row["semail"];
                     $cn = $row["contact"];
                     echo '
                         <tr>

@@ -22,7 +22,7 @@
         
         $user = $_SESSION["userLogin"];
         
-        $myQuery = "SELECT * FROM student WHERE email='".$user."'";
+        $myQuery = "SELECT * FROM student WHERE semail='".$user."'";
 
         $result = $conn->query($myQuery);
         
@@ -30,7 +30,7 @@
         {
             $row = $result->fetch_assoc();
 
-            $fname = $row["fullName"];
+            $fname = $row["fullname"];
         }
       
     ?>

@@ -4,7 +4,7 @@
     $user = $_POST["un"];
     $pass = $_POST["pw"];
 
-    $myQuery = "SELECT * FROM student WHERE email = '".$user."'";
+    $myQuery = "SELECT * FROM student WHERE semail = '".$user."'";
 
     $result = $conn->query($myQuery);
 

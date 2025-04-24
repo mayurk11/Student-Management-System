@@ -52,15 +52,15 @@ if ($uploadOk == 0) {
   }
 }
         $f_name = trim($_POST["fname"]);
-        $s_email = trim($_POST["email"]);
+        $s_email = trim($_POST["semail"]);
         $s_contact = trim($_POST["contact"]);
-        $s_password = trim($_POST["password"]);
+        $s_password = trim($_POST["spassword"]);
         $gender = trim($_POST["gender"]);
         $branch = trim($_POST["branch"]);
 
         $enc_password = password_hash($s_password , PASSWORD_DEFAULT   );
 
-        $myQuery = $conn->prepare("INSERT INTO student(fullname, email, contact, password, gender,branch,photo) VALUES(?,?,?,?,?,?,?)");
+        $myQuery = $conn->prepare("INSERT INTO student(fullname, semail, contact, password, gender,branch,photo) VALUES(?,?,?,?,?,?,?)");
 
         $myQuery->bind_param("sssssss",$f_name,$s_email,$s_contact,$enc_password,$gender,$branch,$target_file);
 
